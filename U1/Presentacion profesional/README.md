@@ -1,3 +1,4 @@
+
 # Kevin Chalán | Portafolio Profesional
 
 Portafolio web personal de Kevin Anthony Chalán Yamberla, estudiante de Ingeniería de Software en la Universidad de las Fuerzas Armadas ESPE.
@@ -24,7 +25,7 @@ Desarrollar una presentación profesional en formato web que muestre informació
 
 ## Estructura del Proyecto
 
-```
+```text
 Presentacion profesional/
 ├── index.html          # Página principal del portafolio
 ├── foto-perfil.jpg     # Fotografía de perfil
@@ -38,38 +39,53 @@ Presentacion profesional/
 
 ---
 
-## Instrucciones rápidas para descargar, construir y desplegar la aplicación en un contenedor local.
+## Instrucciones rápidas para descargar, construir y desplegar la aplicación en un contenedor local
 
 ## Requisitos Previos
 
-* Tener instalado [Docker Desktop](https://docker.com) y en ejecución.
+- Tener instalado [Docker Desktop](https://www.docker.com/) y en ejecución.
 
 ---
 
 ## Desde Docker Hub
 
-Sin Código fuente 
+Sin código fuente.
 
-# 1. Descargar la imagen oficial
+### 1. Descargar la imagen oficial
+
+```bash
 docker pull kachalan/portafolio-profesional:latest
-
-# 2. Iniciar el contenedor
-docker run -d -p 8080:80 --name mi_portafolio kachalan/portafolio-profesional:latest
 ```
 
+### 2. Iniciar el contenedor
 
-##  Construcción Local (Desde Código Fuente) Con Git clone en Github
-
-# 1. Construir la imagen (Ejecutar en la raíz donde está el Dockerfile)
-docker build -t kachalan/portafolio-profesional:latest .
-
-# 2. Iniciar el contenedor
+```bash
 docker run -d -p 8080:80 --name mi_portafolio kachalan/portafolio-profesional:latest
 ```
 
 ---
+
+## Construcción Local (Desde Código Fuente) con Git Clone en GitHub
+
+### 1. Construir la imagen
+
+Ejecutar en la raíz donde está el Dockerfile.
+
+```bash
+docker build -t kachalan/portafolio-profesional:latest .
+```
+
+### 2. Iniciar el contenedor
+
+```bash
+docker run -d -p 8080:80 --name mi_portafolio kachalan/portafolio-profesional:latest
+```
+
+---
+
 ## Enlace a Docker Hub
 
- **[hub.docker.com/r/kachalan/portafolio-profesional] (https://hub.docker.com/r/kachalan/portafolio-profesional)**
+**[hub.docker.com/r/kachalan/portafolio-profesional](https://hub.docker.com/r/kachalan/portafolio-profesional)**
 
 ---
+
