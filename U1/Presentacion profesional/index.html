@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Chalán | Portafolio Profesional</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">KC.</div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre-mi">Sobre Mí</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#multimedia">Multimedia</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <header id="inicio" class="hero">
+        <img src="foto-perfil.jpg" alt="Fotografía de Kevin Chalán" class="foto-perfil">
+        <h1>Kevin Anthony <span>Chalán Yamberla</span></h1>
+        <p class="subtitle">Estudiante de Ingeniería de Software en la Universidad de las Fuerzas Armadas ESPE.</p>
+        <p><strong>Ubicación:</strong> Quito, Ecuador</p>
+        <a href="#proyectos" class="btn">Ver mis proyectos</a>
+    </header>
+
+    <main>
+        <section id="sobre-mi">
+            <h2 class="section-title">Sobre Mí y Formación</h2>
+            <article class="content-box">
+                <p>Soy estudiante de Ingeniería de Software con experiencia en el desarrollo de aplicaciones de
+                    escritorio y sistemas orientados a objetos. Me gusta resolver problemas complejos mediante la
+                    implementación de estructuras de datos, algoritmos, y el uso de metodologías ágiles para la gestión
+                    de proyectos de software.</p>
+
+                <h3 style="margin-top: 20px;">Áreas de Especialización</h3>
+                <ul>
+                    <li><strong>Lenguajes de Programación:</strong> Java, C++, Python, JavaScript.</li>
+                    <li><strong>Desarrollo y Bases de Datos:</strong> Node.js, MongoDB y MongoDB Atlas.</li>
+                    <li><strong>Computación Digital:</strong> Simulación de circuitos y desarrollo con Arduino Mega y
+                        Proteus.</li>
+                    <li><strong>Metodologías y Herramientas:</strong> Scrum, Jira, Git y GitHub.</li>
+                </ul>
+
+                <h3 style="margin-top: 20px;">Historial Académico</h3>
+                <table class="styled-table">
+                    <tr>
+                        <th>Asignatura</th>
+                        <th>Nivel</th>
+                    </tr>
+                    <tr>
+                        <td>Programación Orientada a Objetos</td>
+                        <td>Segundo</td>
+                    </tr>
+                    <tr>
+                        <td>Estructura de Datos</td>
+                        <td>Tercero</td>
+                    </tr>
+                    <tr>
+                        <td>Usabilidad</td>
+                        <td>Cuarto</td>
+                    </tr>
+                    <tr>
+                        <td>Modelos de Procesos</td>
+                        <td>Cuarto</td>
+                    </tr>
+                </table>
+            </article>
+        </section>
+
+        <section id="proyectos">
+            <h2 class="section-title">Proyectos Destacados</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <h3>Crealtiva Studios</h3>
+                    <p>Software de gestión con seguimiento de clientes, inventario y autenticación en dos pasos.</p>
+                    <a href="https://github.com/cevallosmateo07-byte/T2-OPP-CreAltiva-Studio" target="_blank"
+                        class="link-btn">Ver repositorio</a>
+                </article>
+                <article class="project-card">
+                    <h3>Víveres Danielito</h3>
+                    <p>Sistema de inventario automatizado gestionado mediante sprints en Jira.</p>
+                    <a href="https://github.com/Nasakolai/30708_CGSZ_Modelos" target="_blank" class="link-btn">Ver
+                        repositorio</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="multimedia" style="text-align: center;">
+            <h2 class="section-title">Explicacion de un Trabajo</h2>
+            <p style="margin-bottom: 20px; color: var(--text-muted);">Motor de Optimizacion.</p>
+            <video width="640" height="360" controls class="video-player">
+                <source src="videoplayback.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </section>
+
+        <section id="contacto">
+            <h2 class="section-title">Formulario de Contacto</h2>
+            <div class="form-container">
+                <form action="/procesar.php" method="POST">
+
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" placeholder="Ingresa tu correo" required>
+
+                    <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+                    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+
+                    <div class="form-group">
+                        <label>Modalidad de contacto:</label><br>
+                        <input type="radio" id="presencial" name="modalidad" value="presencial" required>
+                        <label for="presencial" class="inline-label">Presencial</label>
+
+                        <input type="radio" id="en_linea" name="modalidad" value="en_linea">
+                        <label for="en_linea" class="inline-label">En línea</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Áreas de interés:</label><br>
+                        <input type="checkbox" id="desarrollo" name="intereses[]" value="desarrollo">
+                        <label for="desarrollo" class="inline-label">Desarrollo Web</label>
+
+                        <input type="checkbox" id="redes" name="intereses[]" value="redes">
+                        <label for="redes" class="inline-label">Redes</label>
+                    </div>
+
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..."
+                        required></textarea>
+
+                    <button type="submit" class="btn-submit">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h2>Enlaces Profesionales</h2>
+        <ul class="footer-links">
+            <li><a href="mailto:Kachalan@espe.edu.ec">Kachalan@espe.edu.ec</a></li>
+            <li><a href="https://github.com/kevanthoc249" target="_blank">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/kevin-anthony-chalan-yamberla-636688441"
+                    target="_blank">LinkedIn</a></li>
+            <li><a href="https://wa.me/59398719067" target="_blank">WhatsApp</a></li>
+        </ul>
+        <p style="margin-top: 2rem; color: var(--text-muted); font-size: 0.8rem;">
+            Diseñado por Kevin Chalán &copy; 2026 | Programación Web ESPE
+        </p>
+    </footer>
+
+</body>
+
+</html>

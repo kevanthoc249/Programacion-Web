@@ -1,0 +1,5 @@
+# Ignorar archivos innecesarios en la imagen Docker
+Dockerfile
+.dockerignore
+*.md
+*.pptx
